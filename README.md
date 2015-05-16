@@ -3,7 +3,7 @@
 gerrywong
 --------------------------------------------------
 
-The script contains a file called "run_analysis.R" and a codebook called "CodeBook.md".
+The repo contains a file called "run_analysis.R" and a codebook called "CodeBook.md".
 
 The goal of the script is to tidy the data downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
