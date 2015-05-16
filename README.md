@@ -3,15 +3,11 @@
 gerrywong
 --------------------------------------------------
 
-The repo contains a file called "run_analysis.R" and a codebook called "CodeBook.md".
+The repo contains a file called "getdata.R", a file called "run_analysis.R" and a codebook called "CodeBook.md".
 
-The goal of the script is to tidy the data downloaded from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+The goal of the script "getdata.R" is to  download data from http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones and then unzip it to a "data" folder.
 
-First, download the zip file to the working directory of R/RStudio.
-
-Second, unzip the file to the working directory.
-
-Third, run the "run_analysis.R" script.
+Then run the "run_analysis.R" script to tidy the data.
 
 There will be a txt file called "Tidy_data.txt" which is the tidy data after calculated.
 
