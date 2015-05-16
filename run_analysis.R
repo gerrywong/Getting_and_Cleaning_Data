@@ -1,5 +1,5 @@
 library(dplyr)
-library(data.table)
+
 test<-read.table("UCI HAR Dataset/test/X_test.txt")
 test_lab<-read.table("UCI HAR Dataset/test/y_test.txt")
 test_sub<-read.table("UCI HAR Dataset/test/subject_test.txt")
@@ -17,12 +17,14 @@ lab1<-which(grepl("mean()",feature[,2],fixed=TRUE)=="TRUE")
 lab2<-which(grepl("std()",feature[,2],fixed=TRUE)=="TRUE")
 lab<-sort(c(lab1,lab2))
 total_chosen<-select(total_df,lab) ##step2, extracting the measurements on the mean and standard deviation 
+
 total_lab<-rbind(test_lab,train_lab)
 from<-c("1","2","3","4","5","6")
 to<-c("Walking","Walking_upstairs","Walking_downstairs","Sitting","Standing","Laying")
 act<-mapvalues(total_lab[,1],from,to)
 sub<-rbind(test_sub,train_sub)
 entb<-cbind(sub,act,total_chosen) ##step3, descriptive activity names
+
 lab_name<-feature[lab,2]
 lab_name2<-gsub("\\(|\\)","",lab_name) ##remove brackets in names
 lab_name3<-gsub("\\-","_",lab_name2)  ##replace the "-" to "_"
