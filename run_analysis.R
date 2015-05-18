@@ -27,7 +27,7 @@ entb<-cbind(sub,act,total_chosen) ##step3, descriptive activity names
 
 lab_name<-feature[lab,2]
 lab_name2<-gsub("\\(|\\)","",lab_name) ##remove brackets in names
-lab_name3<-gsub("\\-","_",lab_name2)  ##replace the "-" by "_"
+lab_name3<-gsub("\\-","_",lab_name2)  ##replace the "-" by "_", although the instructor says that "_" should be replaced by ""
 names(entb)<-c("SubjectID","ActivityType",as.character(lab_name3)) ##step4,labeling the data set with feature names
 
 tab<-tbl_df(entb)
